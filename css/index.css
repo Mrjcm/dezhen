@@ -2,7 +2,7 @@ body {
   font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, "宋体";
   min-width: 1200px;
   height: 100%;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 .jn-bg {
   width: 100%;
