@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta charset="UTF-8">
+	<link rel='icon' href="/r/cms/organization/org/images/1.ico" type='image/x-ico' />
+	<title>曲阜教学点_济宁干部政德教育基地_灯塔-党建在线_中共山东省委组织部</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body>
+	<div class="jn-bg">
+		<img src="../images/jn-title.png" class="jn-title">
+		<div class="header">
+			<ul class="nav clearfix">
+				<li>
+					<a href="index.html" class="nav-list">首页</a>
+				</li>
+				<li>
+					<a href="jdjs.html" class="nav-list">基地简介</a>
+				</li>
+				<li>
+					<a href="qufujxd.html" class="nav-list active">曲阜教学点</a>
+				</li>
+				<li>
+					<a href="zoucjxd.html" class="nav-list">邹城教学点</a>
+				</li>
+				<li>
+					<a href="jiaxjxd.html" class="nav-list">嘉祥教学点</a>
+				</li>
+				<li>
+					<a href="jxly.html" class="nav-list">教学掠影</a>
+				</li>
+				<li>
+					<a href="rjsxjj.html" class="nav-list">儒家圣贤简介</a>
+				</li>
+				<li>
+					<a href="jxxczl.html" class="nav-list">教学宣传资料</a>
+				</li>
+			</ul>
+		</div>
+		<div class="container">
+			<ul class="nav-tabs clearfix">
+				<li class="nav-tab active">
+					<a href="javascript:void(0)">孔子<i></i></a>
+				</li>
+				<li class="nav-tab">
+					<a href="javascript:void(0)">周公<i></i></a>
+				</li>
+				<li class="nav-tab">
+					<a href="javascript:void(0)">颜回</a>
+				</li>
+			</ul>
+			<div class="tab-content active"  style="height: 500px;">
+				<div class="jxd-left">
+					<img src="../images/kongz.jpg" class="jxd-people">
+					<p class="name">孔子</p>
+				</div>
+				<div class="jxd-right">
+					<div class="jxd-wrapper clearfix" style="overflow: auto;">
+						<div class="jxd-contain">
+							<ul class="jxd-items kongz clearfix"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-content"  style="height: 500px;">
+				<div class="jxd-left">
+					<img src="../images/zhoug.jpg" class="jxd-people">
+					<p class="name">周公</p>
+				</div>
+				<div class="jxd-right">
+					<div class="jxd-wrapper clearfix" style="overflow: auto;">
+						<div class="jxd-contain" style="margin-right: 20px;">
+							<ul class="jxd-items zoug clearfix"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-content"  style="height: 500px;">
+				<div class="jxd-left">
+					<img src="../images/yanz.jpg" class="jxd-people">
+					<p class="name">颜回</p>
+				</div>
+				<div class="jxd-right">
+					<div class="jxd-wrapper clearfix" style="overflow: auto;">
+						<div class="jxd-contain" style="margin-right: 20px;">
+							<ul class="jxd-items yanz clearfix"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer"></div>
+	</div>
+	<script type="text/javascript" src="../js/jquery-1.12.1.js"></script>
+	<script type="text/javascript" src="../js/handlebars-v4.0.11.js"></script>
+	<script type="text/javascript" src="../js/include.js"></script>
+	<script id="tpl" type="text/x-handlebars-template">
+		{{#each data}}
+		<li>
+			<div class="jxd-item">
+				<a class="jxd-list" href="{{ url }}" target="_blank">
+					<img src="{{ img }}">
+					<p title="{{ title }}">{{ title }}</p>
+				</a>
+			</div>
+		</li>
+		{{/each}}
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var data = {
+				"kongz": [
+					{
+						"title": "曲阜孔庙万仞宫墙现场教学点",
+						"img": "../images/qufu101.jpg",
+						"url": "video.html?video=qf101"
+					},
+					{
+						"title": "曲阜孔庙大中门现场教学点",
+						"img": "../images/qufu102.jpg",
+						"url": "/r/cms/qilu/qilu/jty/jnzd/pages/video.html?video=qf102"
+					},
+					{
+						"title": "曲阜孔庙杏坛现场教学点",
+						"img": "../images/qufu103.jpg",
+						"url": "/r/cms/qilu/qilu/jty/jnzd/pages/video.html?video=qf103"
+					},
+					{
+						"title": "曲阜孔庙孔氏家庙现场教学点",
+						"img": "../images/qufu104.jpg",
+						"url": "/r/cms/qilu/qilu/jty/jnzd/pages/video.html?video=qf104"
+					},
+					{
+						"title": "曲阜孔府重光门现场教学点",
+						"img": "../images/qufu105.jpg",
+						"url": "/r/cms/qilu/qilu/jty/jnzd/pages/video.html?video=qf105"
+					},
+					{
+						"title": "曲阜孔府内宅戒贪图现场教学点",
+						"img": "../images/qufu106.jpg",
+						"url": "/r/cms/qilu/qilu/jty/jnzd/pages/video.html?video=qf106"
+					},
+					{
+						"title": "曲阜孔林孔子墓现场教学点",
+						"img": "../images/qufu107.jpg",
+						"url": "/r/cms/qilu/qilu/jty/jnzd/pages/video.html?video=qf107"
+					},
+					{
+						"title": "曲阜孔庙太和元气坊现场教学点",
+						"img": "../images/qufu108.jpg",
+						"url": "video-qf108.html"
+					},
+					{
+						"title": "曲阜孔庙大成殿现场教学点",
+						"img": "../images/qufu109.jpg",
+						"url": "video-qf109.html"
+					},
+					{
+						"title": "孔子研究院现场教学点",
+						"img": "../images/qufu110.jpg",
+						"url": "video-qf110.html"
+					}
+				],
+				"zoug": [
+					{
+						"title": "曲阜周公庙元圣殿现场教学点",
+						"img": "../images/qufu301.jpg",
+						"url": "/r/cms/qilu/qilu/jty/jnzd/pages/video.html?video=qf201"
+					},
+					{
+						"title": "周公庙金人铭碑现场教学点",
+						"img": "../images/qufu302.jpg",
+						"url": "/r/cms/qilu/qilu/jty/jnzd/pages/video.html?video=qf202"
+					}
+				],
+				"yanz": [
+					{
+						"title": "曲阜颜庙陋巷井现场教学点",
+						"img": "../images/qufu201.jpg",
+						"url": "/r/cms/qilu/qilu/jty/jnzd/pages/video.html?video=qf301"
+					}
+				]
+			};
+			var myTemplate = Handlebars.compile($("#tpl").html());
+			$('.kongz').html(myTemplate({data: data.kongz}));
+			$('.zoug').html(myTemplate({data: data.zoug}));
+			$('.yanz').html(myTemplate({data: data.yanz}));
+			$('.nav-tab').on('click', function (){
+				$('.nav-tab, .tab-content').removeClass('active');
+				$(this).addClass('active');
+				$('.tab-content').eq($(this).index()).addClass('active');
+			})				
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta charset="UTF-8">
+	<link rel='icon' href="/r/cms/organization/org/images/1.ico" type='image/x-ico' />
+	<title>儒家圣贤简介_济宁干部政德教育基地_灯塔-党建在线_中共山东省委组织部</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body>
+	<div class="jn-bg">
+		<img src="../images/jn-title.png" class="jn-title">
+		<div class="header">
+			<ul class="nav clearfix">
+				<li>
+					<a href="index.html" class="nav-list">首页</a>
+				</li>
+				<li>
+					<a href="jdjs.html" class="nav-list">基地简介</a>
+				</li>
+				<li>
+					<a href="qufujxd.html" class="nav-list">曲阜教学点</a>
+				</li>
+				<li>
+					<a href="zoucjxd.html" class="nav-list">邹城教学点</a>
+				</li>
+				<li>
+					<a href="jiaxjxd.html" class="nav-list">嘉祥教学点</a>
+				</li>
+				<li>
+					<a href="jxly.html" class="nav-list">教学掠影</a>
+				</li>
+				<li>
+					<a href="rjsxjj.html" class="nav-list active">儒家圣贤简介</a>
+				</li>
+				<li>
+					<a href="jxxczl.html" class="nav-list">教学宣传资料</a>
+				</li>
+			</ul>
+		</div>
+		<div class="container">
+			<ul class="people-items clearfix"></ul>
+		</div>
+		<div class="footer"></div>
+	</div>
+	<script type="text/javascript" src="../js/jquery-1.12.1.js"></script>
+	<script type="text/javascript" src="../js/handlebars-v4.0.11.js"></script>
+	<script type="text/javascript" src="../js/include.js"></script>
+		<script id="tpl" type="text/x-handlebars-template">
+		{{#each rjsxjj}}
+		<li>
+			<div class="people-item">
+				<a class="people-list" href={{ url }} target="_blank">
+					<img src="{{ img }}">
+					<p class="title" title="{{ title }}">{{ title }}</p>
+				</a>
+			</div>
+		</li>
+		{{/each}}
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var data = {
+				"rjsxjj": [
+					{
+						"title": "“元圣”周公",
+						"img": "../images/zhoug.jpg",
+						"url": 'rjsxjj-zoug.html'
+					},
+					{
+						"title": "“至圣”孔子",
+						"img": "../images/kongz.jpg",
+						"url": 'rjsxjj-kongz.html'
+					},
+					{
+						"title": "“复圣”颜子",
+						"img": "../images/yanz.jpg",
+						"url": 'rjsxjj-yanz.html'
+					},
+					{
+						"title": "“宗圣”曾子",
+						"img": "../images/zengz.jpg",
+						"url": 'rjsxjj-zengz.html'
+					},
+					{
+						"title": "“述圣”子思子",
+						"img": "../images/zisiz.jpg",
+						"url": 'rjsxjj-zisiz.html'
+					},
+					{
+						"title": "“亚圣”孟子",
+						"img": "../images/mengz.jpg",
+						"url": 'rjsxjj-mengz.html'
+					}
+				]
+			};
+			var myTemplate = Handlebars.compile($("#tpl").html());
+	        $('.people-items').html(myTemplate(data));
+		});
+	</script>
+</body>
+</html>

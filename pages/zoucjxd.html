@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta charset="UTF-8">
+	<link rel='icon' href="/r/cms/organization/org/images/1.ico" type='image/x-ico' />
+	<title>邹城教学点_济宁干部政德教育基地_灯塔-党建在线_中共山东省委组织部</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body>
+	<div class="jn-bg">
+		<img src="../images/jn-title.png" class="jn-title">
+		<div class="header">
+			<ul class="nav clearfix">
+				<li>
+					<a href="index.html" class="nav-list">首页</a>
+				</li>
+				<li>
+					<a href="jdjs.html" class="nav-list">基地简介</a>
+				</li>
+				<li>
+					<a href="qufujxd.html" class="nav-list">曲阜教学点</a>
+				</li>
+				<li>
+					<a href="zoucjxd.html" class="nav-list active">邹城教学点</a>
+				</li>
+				<li>
+					<a href="jiaxjxd.html" class="nav-list">嘉祥教学点</a>
+				</li>
+				<li>
+					<a href="jxly.html" class="nav-list">教学掠影</a>
+				</li>
+				<li>
+					<a href="rjsxjj.html" class="nav-list">儒家圣贤简介</a>
+				</li>
+				<li>
+					<a href="jxxczl.html" class="nav-list">教学宣传资料</a>
+				</li>
+			</ul>
+		</div>
+		<div class="container" style="height: 500px;">
+			<div class="jxd-left" style="top: 31px;">
+				<img src="../images/mengz.jpg" class="jxd-people">
+				<p class="name">孟子</p>
+			</div>
+			<div class="jxd-right">
+				<div class="jxd-wrapper clearfix" style="overflow: auto;">
+					<div class="jxd-contain">
+						<ul class="jxd-items clearfix"></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer"></div>
+	</div>
+	<script type="text/javascript" src="../js/jquery-1.12.1.js"></script>
+	<script type="text/javascript" src="../js/handlebars-v4.0.11.js"></script>
+	<script type="text/javascript" src="../js/include.js"></script>
+	<script id="tpl" type="text/x-handlebars-template">
+		{{#each zouc}}
+		<li>
+			<div class="jxd-item">
+				<a class="jxd-list" href="{{ url }}" target="_blank">
+					<img src="{{ img }}">
+					<p title="{{ title }}">{{ title }}</p>
+				</a>
+			</div>
+		</li>
+		{{/each}}
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var data = {
+				"zouc": [
+					{
+						"title": "邹城孟庙泰山气象门现场教学点",
+						"img": "../images/zouc01.jpg",
+						"url": "/r/cms/qilu/qilu/jty/jnzd/pages/video.html?video=zc001"
+					},
+					{
+						"title": "邹城孟庙孟母断机处现场教学点",
+						"img": "../images/zouc02.jpg",
+						"url": "/r/cms/qilu/qilu/jty/jnzd/pages/video.html?video=zc002"
+					},
+					{
+						"title": "邹城孟庙亚圣殿现场教学点",
+						"img": "../images/zouc03.jpg",
+						"url": "/r/cms/qilu/qilu/jty/jnzd/pages/video.html?video=zc003"
+					},
+					{
+						"title": "邹城孟庙官箴碑现场教学点",
+						"img": "../images/zouc04.jpg",
+						"url": "/r/cms/qilu/qilu/jty/jnzd/pages/video.html?video=zc004"
+					},
+					{
+						"title": "邹城孟府大堂现场教学点",
+						"img": "../images/zouc05.jpg",
+						"url": "/r/cms/qilu/qilu/jty/jnzd/pages/video.html?video=zc005"
+					}
+				]
+			};
+			var myTemplate = Handlebars.compile($("#tpl").html());
+			$('.jxd-items').html(myTemplate(data));
+		});
+	</script>
+</body>
+</html>

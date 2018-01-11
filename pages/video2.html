@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta charset="UTF-8">
+	<link rel='icon' href="/r/cms/organization/org/images/1.ico" type='image/x-ico' />
+	<title>视频_济宁干部政德教育基地_灯塔-党建在线_中共山东省委组织部_灯塔-党建在线_中共山东省委组织部</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/video-js.css">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<script type="text/javascript" src="../js/video.js"></script>
+	<script>
+		videojs.options.flash.swf = "../css/video-js.swf";
+	</script>
+</head>
+<body>
+	<div class="jn-bg">
+		<img src="../images/jn-title.png" class="jn-title">
+		<div class="header">
+			<ul class="nav clearfix">
+				<li>
+					<a href="index.html" class="nav-list" target="_blank">首页</a>
+				</li>
+				<li>
+					<a href="jdjs.html" class="nav-list" target="_blank">基地简介</a>
+				</li>
+				<li>
+					<a href="qufujxd.html" class="nav-list" target="_blank">曲阜教学点</a>
+				</li>
+				<li>
+					<a href="zoucjxd.html" class="nav-list" target="_blank">邹城教学点</a>
+				</li>
+				<li>
+					<a href="jiaxjxd.html" class="nav-list" target="_blank">嘉祥教学点</a>
+				</li>
+				<li>
+					<a href="jxly.html" class="nav-list" target="_blank">教学掠影</a>
+				</li>
+				<li>
+					<a href="rjsxjj.html" class="nav-list" target="_blank">儒家圣贤简介</a>
+				</li>
+				<li>
+					<a href="jxxczl.html" class="nav-list">教学宣传资料</a>
+				</li>
+			</ul>
+		</div>
+		<div class="container">
+			<div class="video"></div>
+		</div>
+		<div class="footer"></div>
+		<script type="text/javascript" src="../js/jquery-1.12.1.js"></script>
+		<script type="text/javascript" src="../js/handlebars-v4.0.11.js"></script>
+		<script type="text/javascript" src="../js/data.js"></script>
+		<script id="tpl" type="text/x-handlebars-template">
+			{{#each this}}
+			<p class="video-title" style="color: #e60000;">{{ title }}</p>
+			{{#if src}}
+			<video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="700" height="394" poster="{{ poster }}" data-setup="{}">
+				<source src="{{ src }}" type='video/mp4'>
+			</video>
+			{{/if}}
+			{{/each}}
+		</script>
+	</body>
+	</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta charset="UTF-8">
+	<link rel='icon' href="/r/cms/organization/org/images/1.ico" type='image/x-ico' />
+	<title>教学掠影_济宁干部政德教育基地_灯塔-党建在线_中共山东省委组织部</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../css/zoom.css">
+</head>
+<body>
+	<div class="jn-bg">
+		<img src="../images/jn-title.png" class="jn-title">
+		<div class="header">
+			<ul class="nav clearfix">
+				<li>
+					<a href="index.html" class="nav-list">首页</a>
+				</li>
+				<li>
+					<a href="jdjs.html" class="nav-list">基地简介</a>
+				</li>
+				<li>
+					<a href="qufujxd.html" class="nav-list">曲阜教学点</a>
+				</li>
+				<li>
+					<a href="zoucjxd.html" class="nav-list">邹城教学点</a>
+				</li>
+				<li>
+					<a href="jiaxjxd.html" class="nav-list">嘉祥教学点</a>
+				</li>
+				<li>
+					<a href="jxly.html" class="nav-list active">教学掠影</a>
+				</li>
+				<li>
+					<a href="rjsxjj.html" class="nav-list">儒家圣贤简介</a>
+				</li>
+				<li>
+					<a href="jxxczl.html" class="nav-list">教学宣传资料</a>
+				</li>
+			</ul>
+		</div>
+		<div class="container" style="height: 550px;overflow-y: auto;position: static;">
+			<ul class="people-items jxly clearfix"></ul>
+		</div>
+		<div class="footer"></div>
+	</div>
+	<script type="text/javascript" src="../js/jquery-1.12.1.js"></script>
+	<script type="text/javascript" src="../js/handlebars-v4.0.11.js"></script>
+	<script type="text/javascript" src="../js/include.js"></script>
+	<script type="text/javascript" src="../js/zoom.js"></script>
+	<script id="tpl" type="text/x-handlebars-template">
+		{{#each jxly}}
+		<li>
+			<a id="bigImg" class="people-list" target="_blank">
+				<img src="{{ img }}" data-action="zoom">
+				<p class="title" title="{{ title }}">{{ title }}</p>
+			</a>
+		</li>
+		{{/each}}
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var data = {
+				"jxly": [
+				{
+					"title": "中央党校第43期中青一班",
+					"img": "../images/jxly01.jpg"
+				},
+				{
+					"title": "国家行政学院第24期厅局级公务员进修班",
+					"img": "../images/jxly02.jpg"
+				},
+				{
+					"title": "中国浦东干部学院中西部地区中青年培训班",
+					"img": "../images/jxly03.jpg"
+				},
+				{
+					"title": "全国组织干部学院中管企业组织人事部门负责人培训班",
+					"img": "../images/jxly04.jpg"
+				},
+				{
+					"title": "山东省委党校第43期市厅级领导干部进修班",
+					"img": "../images/jxly05.jpg"
+				},
+				{
+					"title": "山东行政学院处级公务员培训班",
+					"img": "../images/jxly06.jpg"
+				},
+				{
+					"title": "山东省干部学院县（市、区）委组织部长培训班",
+					"img": "../images/jxly07.jpg"
+				},
+				{
+					"title": "福建省委党校第50期厅级干部进修班",
+					"img": "../images/jxly08.jpg"
+				},
+				{
+					"title": "中国浦东干部学院非洲国家领导干部研修班",
+					"img": "../images/jxly09.jpg"
+				},
+				{
+					"title": "中国浦东干部学院越南司局级干部培训班",
+					"img": "../images/jxly10.jpg"
+				},
+				{
+					"title": "中国浦东干部学院2017年斐济高级公务员研修班",
+					"img": "../images/jxly11.jpg"
+				}
+				]
+			};
+			var myTemplate = Handlebars.compile($("#tpl").html());
+			$('.people-items.jxly').html(myTemplate(data));
+			if (screen.width < 800) {
+				$('.people-list img').attr('data-action', '')
+			}
+		});
+	</script>
+</body>
+</html>
