@@ -65,11 +65,10 @@ body {
 }
 /* 封面样式 */
 .con {
-  /* width: 1112px; */
-   width: 1000px;
-
+  width: 1112px;
   margin: 0 auto;
   padding-top: 30px;
+  height: 3000px;
 }
 .con .jn-desc {
   font-size: 24px;
