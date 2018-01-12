@@ -1,7 +1,8 @@
 body {
   font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, "宋体";
-  min-width: 1200px;
-  min-height: 101%;
+  /* min-width: 1200px; */
+  width: 100%;
+  /* min-height: 101%; */
   margin: 0 auto;
 }
 .jn-bg {
